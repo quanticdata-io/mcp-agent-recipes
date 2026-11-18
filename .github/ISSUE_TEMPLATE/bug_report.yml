@@ -1,0 +1,35 @@
+name: Bug report
+description: A recipe fails, hangs or gives a wrong result
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Never paste an API key. Replace it with `qd_live_...`.
+  - type: dropdown
+    id: recipe
+    attributes:
+      label: Recipe
+      options: [openai_agents, claude_agent, langgraph_agent]
+    validations:
+      required: true
+  - type: dropdown
+    id: transport
+    attributes:
+      label: Transport
+      options: [remote, local]
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Python, OS and SDK versions
+      placeholder: Python 3.12, Windows 11, openai-agents 0.25.0
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Command, output and what you expected
+      render: shell
+    validations:
+      required: true
