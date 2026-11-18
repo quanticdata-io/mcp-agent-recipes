@@ -96,12 +96,12 @@ Environment variables, read by [`qd_mcp_config.py`](qd_mcp_config.py):
 ```python
 from qd_mcp_config import QuanticDataMCP, claude_tool_names
 
-cfg = QuanticDataMCP.from_env()            # raises MissingApiKeyError with a clear message
-cfg.openai_agents_params()                 # params for agents.mcp.MCPServerStreamableHttp / MCPServerStdio
-cfg.claude_agent_server()                  # one entry of ClaudeAgentOptions.mcp_servers
-cfg.langchain_connection()                 # one connection of MultiServerMCPClient
-claude_tool_names(["search", "scrape"])    # ["mcp__quanticdata__search", "mcp__quanticdata__scrape"]
-print(cfg)                                 # QuanticDataMCP(api_key='qd_live_****', url=..., transport='remote')
+cfg = QuanticDataMCP.from_env()  # raises MissingApiKeyError with a clear message
+cfg.openai_agents_params()  # params for agents.mcp.MCPServerStreamableHttp / MCPServerStdio
+cfg.claude_agent_server()  # one entry of ClaudeAgentOptions.mcp_servers
+cfg.langchain_connection()  # one connection of MultiServerMCPClient
+claude_tool_names(["search", "scrape"])  # ["mcp__quanticdata__search", "mcp__quanticdata__scrape"]
+print(cfg)  # QuanticDataMCP(api_key='qd_live_****', url=..., transport='remote')
 ```
 
 ## The MCP server

@@ -101,7 +101,7 @@ def test_local_configs_run_the_npm_package(api_key: str) -> None:
 
 
 def test_subprocess_env_does_not_leak_other_secrets(monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.setenv("OPENAI_API_KEY", "sk-not-for-the-mcp-server")
+    monkeypatch.setenv("OPENAI_API_KEY", "not-a-real-openai-key")
     env = QuanticDataMCP(api_key=FAKE_KEY, transport="local").subprocess_env()
     assert "OPENAI_API_KEY" not in env
 
