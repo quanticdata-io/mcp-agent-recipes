@@ -1,0 +1,16 @@
+name: Recipe request
+description: A framework or a task you want a recipe for
+labels: [enhancement]
+body:
+  - type: input
+    id: framework
+    attributes:
+      label: Agent framework
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: Task the agent should do, and which QuanticData tools it needs
+    validations:
+      required: true

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: QuanticData MCP server
+    url: https://quanticdata.io/mcp-server/
+    about: Endpoint, authentication and tool list. Account questions go to hello@quanticdata.io.
+  - name: Security report
+    url: https://github.com/quanticdata-io/mcp-agent-recipes/blob/main/SECURITY.md
+    about: Please report vulnerabilities privately.
